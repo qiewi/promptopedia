@@ -8,6 +8,18 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 const Nav = () => {
     const isUserLoggedIn = true;
 
+    const [providers, setProviders] = useState(null);
+
+    useEffect(() => {
+        const setProviders = async () => {
+            const response = await getProviders();
+        
+            setProviders(response);
+        }
+        
+        setProviders();
+    }, []);
+
     return (
         <nav className="flex-between w-full mb-16 pt-3">
             <Link href="/" className="flex gap-2 flex-center">
@@ -47,6 +59,19 @@ const Nav = () => {
                     </div>
                 ) : (
                     <>
+                        {
+                            providers && 
+                            Object.values(providers).map((provider) => (
+                                <button
+                                    type="button"
+                                    key={provider.name}
+                                    onClick={() => signIn(provider.id)}
+                                    classNamme="black_btn"
+                                >
+                                    Sign In
+                                </button>
+                            ))
+                        }
                     </>
                 )}
             </div>
