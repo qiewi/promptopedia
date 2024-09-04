@@ -1,6 +1,8 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
+import { connectToDB } from '@utils/database';
+import { connect } from "mongoose";
 
 const handler = NextAuth({
     providers: [
@@ -14,17 +16,16 @@ const handler = NextAuth({
     },
     async signIn({ profile }) {
         try {
-            await mongoose.connect(process.env.MONGODB_URI, {
-                dbName: "share_prompt",
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            })
+            await connectToDB();
 
-            isConnected = true;
-            console.log('MongoDB is connected');
-            
+            // check if a user alr exists
+
+            // if not, create a new user
+
+            return true;
         } catch (error) {
             console.log(error);
+            return false;
         }
     }
 })
