@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/Copyright-Qiewi)
 ![Static Badge](https://img.shields.io/badge/Promptopedia%20App-52AA1F)
 
-![Header](https://github.com/qiewi/Michael-vs-Lalapan/blob/main/readme%20assets/Header.png)
+![Header](https://github.com/qiewi/promptopedia/blob/main/readme_pics/home_page.png)
 
 # **Learning NextJS - Project**  
 _______
@@ -26,9 +26,13 @@ _______
 
 ## Screenshots
 
-Main Menu
+Profile
 
-![App Screenshot](https://github.com/qiewi/Michael-vs-Lalapan/blob/main/readme%20assets/MainMenu.png)
+![App Screenshot](https://github.com/qiewi/promptopedia/blob/main/readme_pics/profile.png)
+
+Create Prompt
+
+![App Screenshot](https://github.com/qiewi/promptopedia/blob/main/readme_pics/create.png)
 
 
 ## Tech Needs
