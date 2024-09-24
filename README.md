@@ -5,7 +5,7 @@
 
 ![Header](https://github.com/qiewi/promptopedia/blob/main/readme_pics/home_page.png)
 
-# **Learning NextJS - Project**  
+# **A NextJS - Project**  
 _______
 
 ## Deskripsi
